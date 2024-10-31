@@ -1,0 +1,103 @@
+#inquiry-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 30px;
+    color: #343434;
+    cursor: pointer;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 598px;
+  border-radius: 20px;
+}
+
+
+.modal-title {
+    color: var(--Black-Text, #343434);
+font-family: "Pretendard";
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+
+.modal-subtitle {
+    color: var(--gray-70, #6E6E6E);
+font-family: "Pretendard";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+#inquiry-form {
+    width: 100%;
+    margin-block: 30px;
+}
+
+#inquiry-form label {
+    color: var(--gray-70, #6E6E6E);
+font-family: "Pretendard";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+#inquiry-form input {
+display: flex;
+padding: 14px 16px;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+border-radius: 8px;
+background: #F9F9F9;
+outline: none;
+border: none;
+color: #9E9E9E;
+font-family: "Pretendard";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 16px;
+}
+
+
+
+.period-input {
+    position: relative;
+}
+
+
+
+::-webkit-calendar-picker-indicator { 
+    right: 10px;
+    background-image: url('/public/images/date-indicator.svg');
+    position: absolute;
+}
