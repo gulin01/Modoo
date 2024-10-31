@@ -23,6 +23,122 @@
 
 
 
+//section 2
+
+const section2Data = [
+    {
+        title:"청소서비스",
+        image:"public/images/section2/image1.svg",
+        description:"깨끗한 공간, 행복한 일상",
+        features:["입주 청소","이사 청소","인테리어 청소","사업장 청소"]
+    },
+    {
+        title:"전문시공",
+        image:"public/images/section2/image2.svg",
+        description:"공간의 가치를 높이는 전문 솔루션",
+        features:["줄눈 시공","탄성 코트","곰팡이 제거"]
+    },
+    {
+        title:"코팅시공",
+        image:"public/images/section2/image3.svg",
+        description:"내구성과 아름다움을 한번에",
+        features:["마루 코팅","나노 코팅","대리석 연마","상판 코팅"]
+    }
+
+]
+
+
+function createSection2() {
+    const section2Container = document.querySelector('.section2-container');
+
+    section2Data.forEach(item => {
+        // Create item div
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('section2-item');
+
+        // Create image element
+        const img = document.createElement('img');
+        img.classList.add("mainImg")
+        img.src = item.image;
+        img.alt = item.title;
+        img.style.width = "100%"; // Ensure the image fits within the item
+
+        // Create title element
+        const title = document.createElement('h3');
+        title.textContent = item.title;
+
+        // Create description element
+        const description = document.createElement('p');
+        description.classList.add("description")
+        description.textContent = item.description || ''; // Only show if exists
+
+        // Create features list element
+        const featuresList = document.createElement('div');
+        featuresList.classList.add('features-list');
+        item.features.forEach(feature => {
+            const featureDiv = document.createElement('div');
+             featureDiv.classList.add("featureDiv")
+            const icon = document.createElement("img")
+            icon.src = "public/images/section2/check.svg"
+            icon.classList.add("check")
+            icon.alt = "check"
+            const text = document.createElement('p');
+            text.textContent = feature;
+            featureDiv.appendChild(icon)
+            featureDiv.appendChild(text)
+            featuresList.appendChild(featureDiv);
+        });
+
+        // Append elements to itemDiv
+        itemDiv.appendChild(img);
+        itemDiv.appendChild(title);
+       
+     // To track the active item
+
+        // Add click event to toggle features
+        itemDiv.addEventListener('click', () => {
+            const isSmallScreen = window.innerWidth < 1200;
+
+            const isVisible = featuresList.style.display === 'flex';
+        
+            if(isSmallScreen){
+                if (isVisible) {
+                    itemDiv.appendChild(img);
+                    itemDiv.style.flexDirection = "column-reverse";
+                    itemDiv.removeChild(description);
+                    itemDiv.style.width = "90px"
+                    itemDiv.removeChild(featuresList);
+                    featuresList.style.display = 'none'; // hide featuresList
+                } else {
+                    itemDiv.style.flexDirection = "column";
+                    itemDiv.removeChild(img);
+                    itemDiv.style.width = "154px"
+                    itemDiv.appendChild(description);
+                    itemDiv.appendChild(featuresList);
+                    featuresList.style.display = 'flex'; // show featuresList
+                } 
+            }else{
+                if (isVisible) {
+                    itemDiv.appendChild(img);
+                    itemDiv.removeChild(description);
+                    itemDiv.removeChild(featuresList);
+                    featuresList.style.display = 'none'; // hide featuresList
+                } else {
+                    itemDiv.removeChild(img);
+                    itemDiv.appendChild(description);
+                    itemDiv.appendChild(featuresList);
+                    featuresList.style.display = 'flex'; // show featuresList
+                } 
+            }
+                      
+        });
+
+        // Append itemDiv to section2-container
+        section2Container.appendChild(itemDiv);
+    });
+}
+
+//section 3
 const reasonsBox = document.querySelector('.reasons-container');
 
 
@@ -169,6 +285,8 @@ function createSection4 () {
 
 // Select the reasons-grid container
 document.addEventListener('DOMContentLoaded', () => {
+    createSection2()
     createSection3()
     createSection4()
+    
   });
