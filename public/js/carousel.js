@@ -38,27 +38,128 @@ const reasonsData = [
   // Add more objects as needed
 ];
 
+function createSection3 () {
+        reasonsData.forEach((reason,index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('reason-card');
+  
+        const img = document.createElement('img');
+        img.src = reason.image;
+        img.alt = reason.title;
+  
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('content');
+  
+        const icon = document.createElement('img');
+        icon.src = reason.icon;
+        icon.alt = `${index}`;
+        icon.classList.add('icon');
+        
+        const title = document.createElement('h3');
+  
+        title.textContent = reason.title;
+        contentDiv.appendChild(icon)
+        contentDiv.appendChild(title)
+        itemDiv.appendChild(img);
+        itemDiv.appendChild(contentDiv);
+        reasonsBox.appendChild(itemDiv);
+      });
+}
+
+const section4Data = [
+    { 
+        image: 'public/images/section4/image1.svg', 
+        title: '현관 및 거실',
+        hashtags: ["#먼지 및 오염물질 제거"],
+        services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
+     },
+    {
+         image: 'public/images/section4/image2.svg', 
+         title: '화장실',
+         hashtags: ["#오염제거 및 스팀청소"],
+         services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
+
+    },
+    { 
+        image: 'public/images/section4/image3.svg', 
+        title: '주방/싱크대',
+        hashtags: ["#이물질 및 오염 제거"],
+        services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
+
+     },
+    { 
+        image: 'public/images/section4/image4.svg',
+         title: '방(ROOM)' ,
+         hashtags: ["#먼지 및 오염물질 제거"],
+         services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
+
+        },
+    { 
+        image: 'public/images/section4/image5.svg', 
+        title: '베란다/다용도실',
+        hashtags: ["#먼지 및 이물질 제거"] ,
+        services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
+
+    },
+    { 
+        image: 'public/images/section4/image6.svg', 
+        title: '피톤치드 서비스',
+        hashtags: ["#새집증후군완화","#향균, 탈취효과"] ,
+        services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
+
+    },
+    // Add more objects as needed
+  ];
+  
+
+function createSection4 () {
+    
+    const section4Container = document.querySelector('.section4-container');
+    
+    section4Data.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('section4-card');
+        
+        // Image element
+        const img = document.createElement('img');
+        img.src = item.image;
+        img.alt = item.title;
+        
+        // Title element
+        const title = document.createElement('h3');
+        title.textContent = item.title;
+    
+        // Hashtags
+        const hashtagsDiv = document.createElement('div');
+        hashtagsDiv.classList.add('hashtags');
+        item.hashtags.forEach(tag => {
+            const span = document.createElement('span');
+            span.textContent = tag;
+            hashtagsDiv.appendChild(span);
+        });
+    
+        // Services list
+        const servicesDiv = document.createElement('div');
+        servicesDiv.classList.add('services');
+        item.services.forEach(service => {
+            const serviceItem = document.createElement('span');
+            serviceItem.textContent = service;
+            servicesDiv.appendChild(serviceItem);
+        });
+    
+        // Append elements to itemDiv
+        itemDiv.appendChild(img);
+        itemDiv.appendChild(title);
+        itemDiv.appendChild(hashtagsDiv);
+        itemDiv.appendChild(servicesDiv);
+    
+        // Append itemDiv to section4-container
+        section4Container.appendChild(itemDiv);
+    });
+    
+}
 // Select the reasons-grid container
 document.addEventListener('DOMContentLoaded', () => {
-    reasonsData.forEach((reason,index) => {
-      const itemDiv = document.createElement('div');
-      itemDiv.classList.add('reason-card');
-      const img = document.createElement('img');
-      img.src = reason.image;
-      img.alt = reason.title;
-      const contentDiv = document.createElement('div');
-      contentDiv.classList.add('content');
-      const icon = document.createElement('img');
-      icon.src = reason.icon;
-      icon.alt = `${index}`;
-      icon.classList.add('icon');
-      const title = document.createElement('h3');
-
-      title.textContent = reason.title;
-      contentDiv.appendChild(icon)
-      contentDiv.appendChild(title)
-      itemDiv.appendChild(img);
-      itemDiv.appendChild(contentDiv);
-      reasonsBox.appendChild(itemDiv);
-    });
+    createSection3()
+    createSection4()
   });

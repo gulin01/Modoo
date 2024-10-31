@@ -288,9 +288,8 @@ text-align: center;
  
 }
 
-
-#reasons .black{
-  color:  #343434;
+.black{
+  color:  #343434 !important;
 }
 
 .reasons-container {
@@ -355,6 +354,45 @@ text-align: center;
     height: 40px !important;
     flex-shrink: 0;
 }
+
+
+#section4{
+    padding: 2em;
+    text-align: center;
+    background:  #fff;
+    padding-top:80px;
+    padding-bottom:80px;
+    display: flex;
+    flex-direction: column;
+    border:1px solid red;
+}
+
+
+#section4 h2{
+    color:  #343434;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom:24px;
+}
+
+#section4 p{
+    color: #6E6E6E;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+
+
+
+
 
 /* Contact Form */
 #contact {
