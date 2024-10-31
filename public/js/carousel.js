@@ -1,30 +1,29 @@
-const carousel = document.querySelector('.carousel');
-const items = document.querySelectorAll('.carousel-item');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-let index = 0;
+// const carousel = document.querySelector('.carousel');
+// const items = document.querySelectorAll('.carousel-item');
+// const prevBtn = document.getElementById('prevBtn');
+// const nextBtn = document.getElementById('nextBtn');
+// let index = 0;
 
 
 
 
-function showItem() {
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-}
+// function showItem() {
+//     carousel.style.transform = `translateX(-${index * 100}%)`;
+// }
 
-nextBtn.addEventListener('click', () => {
-    index = (index + 1) % items.length; // Loop back to the start
-    showItem();
-});
+// nextBtn.addEventListener('click', () => {
+//     index = (index + 1) % items.length; // Loop back to the start
+//     showItem();
+// });
 
-prevBtn.addEventListener('click', () => {
-    index = (index - 1 + items.length) % items.length; // Loop to the end if negative
-    showItem();
-});
+// prevBtn.addEventListener('click', () => {
+//     index = (index - 1 + items.length) % items.length; // Loop to the end if negative
+//     showItem();
+// });
 
 
 
 const reasonsBox = document.querySelector('.reasons-container');
-
 
 
 
@@ -113,18 +112,22 @@ const section4Data = [
   
 
 function createSection4 () {
-    
     const section4Container = document.querySelector('.section4-container');
-    
     section4Data.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('section4-card');
-        
-        // Image element
+
         const img = document.createElement('img');
         img.src = item.image;
         img.alt = item.title;
         
+
+      
+
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add("content")
+
+
         // Title element
         const title = document.createElement('h3');
         title.textContent = item.title;
@@ -137,27 +140,33 @@ function createSection4 () {
             span.textContent = tag;
             hashtagsDiv.appendChild(span);
         });
-    
-        // Services list
+      // Services list
         const servicesDiv = document.createElement('div');
         servicesDiv.classList.add('services');
-        item.services.forEach(service => {
-            const serviceItem = document.createElement('span');
-            serviceItem.textContent = service;
-            servicesDiv.appendChild(serviceItem);
-        });
+      item.services.forEach(service => {
+          const serviceItem = document.createElement('span');
+          serviceItem.classList.add("service")
+          serviceItem.textContent = service;
+          servicesDiv.appendChild(serviceItem);
+      });
+
+
+      
+        contentDiv.appendChild(title)
+        contentDiv.appendChild(hashtagsDiv)
+        contentDiv.appendChild(servicesDiv)
+      
     
         // Append elements to itemDiv
         itemDiv.appendChild(img);
-        itemDiv.appendChild(title);
-        itemDiv.appendChild(hashtagsDiv);
-        itemDiv.appendChild(servicesDiv);
-    
+        itemDiv.appendChild(contentDiv);
+
         // Append itemDiv to section4-container
         section4Container.appendChild(itemDiv);
     });
     
 }
+
 // Select the reasons-grid container
 document.addEventListener('DOMContentLoaded', () => {
     createSection3()
