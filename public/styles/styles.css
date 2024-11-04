@@ -1030,3 +1030,151 @@ footer {
     padding: 1em;
     background-color: #f0f8ff;
 }
+
+
+
+
+.footer{
+    width: 100%;
+    background-color: #fff;
+    fill:  #FFF;
+    filter: drop-shadow(0px -4px 40px rgba(0, 0, 0, 0.08)); 
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+}
+
+
+.box{
+    width: 100%;
+    padding-left: 180px;
+    padding-top:154px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap:24px;
+    position: relative;
+
+
+}
+
+
+.logo{
+    width: 62px;
+    height: 34px;
+    margin-bottom: 20px;
+}
+
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    align-items: start;
+}
+
+
+.sub, .sub2{
+    display: flex;
+    gap:8px;
+
+}
+
+
+
+.ceo{
+    color:  #343434;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.gray-span{
+    color:  #6E6E6E;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dot, .dot2{
+   width: 4px;
+   height: 4px;
+   background-color: #A0A0A0;
+   border-radius: 50%;
+}
+
+
+.footer-black{
+    color:  #343434;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.copy{
+    color: #A0A0A0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+}
+
+.img{
+    position: absolute;  
+    right: inherit;
+    right:100px;
+    top:-150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 1200px) {
+    .box{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top:40px;
+
+    }
+
+    .gray-span{
+        font-size: 11px;
+    }
+
+
+    .footer-black{
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 500;
+        color:  #6E6E6E;
+       text-align: start;
+    }
+
+    .sub2{
+       flex-direction: column;
+       align-items: start;
+    }
+
+    .dot2{
+        display: none;
+    }
+    
+    .copy{
+        text-align: start;
+    }
+    .img{
+        width: 103px;
+        height: 105px;
+        right:50px;
+        top:-50px;
+    }
+   
+}
