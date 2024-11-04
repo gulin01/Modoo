@@ -133,12 +133,12 @@ function createSection2() {
 //section 3
 const reasonsBox = document.querySelector('.reasons-container');
 const reasonsData = [
-  { image: 'public/images/section3/image1.svg', icon:"public/images/section3/icon1.svg",title: '친환경 세제' },
-  { image: 'public/images/section3/image2.svg', icon:"public/images/section3/icon2.svg",title: '구역별 걸레 분리사용' },
-  { image: 'public/images/section3/image3.svg', icon:"public/images/section3/icon3.svg",title: '무료 살균 소독 스팀 서비스' },
-  { image: 'public/images/section3/image4.svg', icon:"public/images/section3/icon4.svg",title: '무료 피톤치드 서비스' },
-  { image: 'public/images/section3/image5.svg', icon:"public/images/section3/icon5.svg",title: 'A/S 100% 해결' },
-  { image: 'public/images/section3/image6.svg', icon:"public/images/section3/icon6.svg",title: '가격 정찰제' },
+  { image: 'public/images/section3/image1.png', icon:"public/images/section3/icon1.svg",title: '친환경 세제' },
+  { image: 'public/images/section3/image2.png', icon:"public/images/section3/icon2.svg",title: '구역별 걸레 분리사용' },
+  { image: 'public/images/section3/image3.png', icon:"public/images/section3/icon3.svg",title: '무료 살균 소독 스팀 서비스' },
+  { image: 'public/images/section3/image4.png', icon:"public/images/section3/icon4.svg",title: '무료 피톤치드 서비스' },
+  { image: 'public/images/section3/image5.png', icon:"public/images/section3/icon5.svg",title: 'A/S 100% 해결' },
+  { image: 'public/images/section3/image6.png', icon:"public/images/section3/icon6.svg",title: '가격 정찰제' },
   // Add more objects as needed
 ];
 
@@ -172,41 +172,41 @@ function createSection3 () {
 
 const section4Data = [
     { 
-        image: 'public/images/section4/image1.svg', 
+        image: 'public/images/section4/image1.png', 
         title: '현관 및 거실',
         hashtags: ["#먼지 및 오염물질 제거"],
         services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
      },
     {
-         image: 'public/images/section4/image2.svg', 
+         image: 'public/images/section4/image2.png', 
          title: '화장실',
          hashtags: ["#오염제거 및 스팀청소"],
          services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
 
     },
     { 
-        image: 'public/images/section4/image3.svg', 
+        image: 'public/images/section4/image3.png', 
         title: '주방/싱크대',
         hashtags: ["#이물질 및 오염 제거"],
         services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
 
      },
     { 
-        image: 'public/images/section4/image4.svg',
+        image: 'public/images/section4/image4.png',
          title: '방(ROOM)' ,
          hashtags: ["#먼지 및 오염물질 제거"],
          services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
 
         },
     { 
-        image: 'public/images/section4/image5.svg', 
+        image: 'public/images/section4/image5.png', 
         title: '베란다/다용도실',
         hashtags: ["#먼지 및 이물질 제거"] ,
         services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]
 
     },
     { 
-        image: 'public/images/section4/image6.svg', 
+        image: 'public/images/section4/image6.png', 
         title: '피톤치드 서비스',
         hashtags: ["#새집증후군완화","#향균, 탈취효과"] ,
         services:["벽","바닥","신발장","현관타일","콘센트","창틀/문틀","조명기구"]

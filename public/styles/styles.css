@@ -24,6 +24,7 @@ body {
 
 .section5 .mobile{
   width: 100%;
+  display: none;
 }
 
 
@@ -645,6 +646,7 @@ text-align: center;
             font-weight: 300;
             line-height: 40px; /* 133.333% */
             letter-spacing: -0.6px;
+            word-break: keep-all;
         }
 
         #hero div p {
