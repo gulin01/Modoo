@@ -859,8 +859,21 @@ margin-bottom: 16px;
     margin-block: 30px;
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: start;
+    align-items: start;
+}
+
+#contact > form > .checkbox-container > div {
+  display: flex;
+  align-items: center;
+}
+
+#contact > form > .checkbox-container > .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 #contact > form > button {
