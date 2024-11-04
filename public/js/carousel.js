@@ -49,6 +49,7 @@ const section2Data = [
 
 
 function createSection2() {
+
     const section2Container = document.querySelector('.section2-container');
 
     section2Data.forEach(item => {
@@ -92,57 +93,45 @@ function createSection2() {
         // Append elements to itemDiv
         itemDiv.appendChild(img);
         itemDiv.appendChild(title);
+        itemDiv.appendChild(description);
+        itemDiv.appendChild(featuresList)
        
      // To track the active item
 
-        // Add click event to toggle features
-        itemDiv.addEventListener('click', () => {
-            const isSmallScreen = window.innerWidth < 1200;
-
-            const isVisible = featuresList.style.display === 'flex';
-        
-            if(isSmallScreen){
-                if (isVisible) {
-                    itemDiv.appendChild(img);
-                    itemDiv.style.flexDirection = "column-reverse";
-                    itemDiv.removeChild(description);
-                    itemDiv.style.width = "90px"
-                    itemDiv.removeChild(featuresList);
-                    featuresList.style.display = 'none'; // hide featuresList
-                } else {
-                    itemDiv.style.flexDirection = "column";
-                    itemDiv.removeChild(img);
-                    itemDiv.style.width = "154px"
-                    itemDiv.appendChild(description);
-                    itemDiv.appendChild(featuresList);
-                    featuresList.style.display = 'flex'; // show featuresList
-                } 
-            }else{
-                if (isVisible) {
-                    itemDiv.appendChild(img);
-                    itemDiv.removeChild(description);
-                    itemDiv.removeChild(featuresList);
-                    featuresList.style.display = 'none'; // hide featuresList
-                } else {
-                    itemDiv.removeChild(img);
-                    itemDiv.appendChild(description);
-                    itemDiv.appendChild(featuresList);
-                    featuresList.style.display = 'flex'; // show featuresList
-                } 
-            }
-                      
-        });
 
         // Append itemDiv to section2-container
         section2Container.appendChild(itemDiv);
     });
+
+    var element = document.querySelectorAll('.section2-item');
+    console.log(element,"ELEMENT")
+    if (element) {
+    
+        element.forEach(function(el, key){
+          
+           el.addEventListener('click', function () {
+              console.log(key);
+           
+              el.classList.toggle("active");
+              
+               element.forEach(function(ell, els){
+                   if(key !== els) {
+                       ell.classList.remove('active');
+                   }
+               });
+           });
+        });
+      }
+    
+
 }
+
+
+
+
 
 //section 3
 const reasonsBox = document.querySelector('.reasons-container');
-
-
-
 const reasonsData = [
   { image: 'public/images/section3/image1.svg', icon:"public/images/section3/icon1.svg",title: '친환경 세제' },
   { image: 'public/images/section3/image2.svg', icon:"public/images/section3/icon2.svg",title: '구역별 걸레 분리사용' },
@@ -236,14 +225,9 @@ function createSection4 () {
         const img = document.createElement('img');
         img.src = item.image;
         img.alt = item.title;
-        
-
-      
 
         const contentDiv = document.createElement('div');
         contentDiv.classList.add("content")
-
-
         // Title element
         const title = document.createElement('h3');
         title.textContent = item.title;
@@ -265,15 +249,13 @@ function createSection4 () {
           serviceItem.textContent = service;
           servicesDiv.appendChild(serviceItem);
       });
-
-
-      
+ 
         contentDiv.appendChild(title)
         contentDiv.appendChild(hashtagsDiv)
         contentDiv.appendChild(servicesDiv)
       
     
-        // Append elements to itemDiv
+        // Append elements to itemDiv 
         itemDiv.appendChild(img);
         itemDiv.appendChild(contentDiv);
 
@@ -283,10 +265,10 @@ function createSection4 () {
     
 }
 
+
 // Select the reasons-grid container
 document.addEventListener('DOMContentLoaded', () => {
     createSection2()
     createSection3()
     createSection4()
-    
   });
