@@ -355,24 +355,32 @@ text-align: center;
   color:  #343434 !important;
 }
 
-
-
+#process {
+      width: 1440px !important;
+    height: 1873px !important;
+    margin-bottom: 200px;
+}
 
 .process > img  {
-    max-width: 50% !important;
+    width: 1440px !important;
+    height: 1873px !important;
     border:  1px solid #000;
     /* background-image: url('/public/images/section5/process-pc.png');
     height: 1873px; */
 }
 
+
+
 #nationwide {
     padding-block: 80px !important;
 }
 
-#nationwide > p {
-     margin-bottom: 100px !important;
+#nationwide > p:last-child {
+    margin-top: 100px !important;
 }
+
 .map-image {
+ margin-top: 60px;
  width: 100% !important;
  display: flex;
  justify-content: center;
@@ -381,6 +389,7 @@ text-align: center;
 .map-image > img {
     max-width: 944px !important;
     margin: auto;
+    height: 978px;
 }
 
 
@@ -800,13 +809,74 @@ text-align: center;
         
     }
 
-
-
 /* Contact Form */
 #contact {
-    padding: 2em;
-    background-color: #f9f9f9;
+ max-width: 1200px !important;
+ margin: auto;
+ padding-block: 200px;
 }
+
+
+
+
+
+#contact label {
+    color: var(--gray-70, #6E6E6E);
+font-family: "Pretendard";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+#contact > form {
+    margin-top: 30px;
+}
+
+
+#contact input {
+display: flex;
+padding: 14px 16px;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+border-radius: 8px;
+background: #F9F9F9;
+outline: none;
+border: none;
+color: #9E9E9E;
+font-family: "Pretendard";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 16px;
+}
+
+
+#contact > form > .checkbox-container {
+    margin-block: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#contact > form > button {
+    display: flex;
+height: 52px;
+width: 100%;
+padding: 10px 40px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+border-radius: 12px;
+background: var(--primary, #27B5B7);
+}
+
+
 
 form label {
     display: block;

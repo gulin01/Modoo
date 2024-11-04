@@ -61,21 +61,21 @@
     <!-- Booking Process -->
     <section id="process" class="container">
         <h2 class="title">모두클린의 예약 진행 단계</h2>
-            <img src="/public/images/section5/process-pc.png" alt="">
-        </section>
-        
-    <!-- Nationwide Service -->
+        <img height="1873" src="/public/images/section5/process-pc.png" alt="">
+    </section>
 
+    <!-- Nationwide Service -->
     <section id="nationwide container">
         <p class="title">전국 어디서나 평등한 청소서비스</>
-        <p class="subtitle2">어디서든 간편하게, 언제든지 예약 문의가 가능합니다.</p>
+        <p class="subtitle1">어디서든 간편하게, 언제든지 예약 문의가 가능합니다.</p>
         <div class="map-image">
             <img src="/public/images/section6/map-pc.svg" alt="">
         </div>
     </section>
 
     <section id="contact">
-        <h2>무료견적 문의</h2>
+        <h2 class="title">무료견적 문의</h2>
+        <p class="subtitle1">좋은 청소업체를 찾는 가장 쉬운 방법. 모두클린</p>
         <form action="#">
             <label for="name">성명</label>
             <input type="text" id="name" name="name" required>
@@ -85,9 +85,10 @@
             
             <label for="email">이메일</label>
             <input type="email" id="email" name="email" required>
-            
-            <label for="message">메시지</label>
-            <textarea id="message" name="message" required></textarea>
+            <div class="checkbox-container">
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox">이메일을 확인하기</label>
+            </div>            
             <button type="submit">문의하기</button>
         </form>
     </section>
@@ -111,9 +112,8 @@
                 <input type="text" name="phoneNumber" id="phoneNumber" placeholder="숫자만 입력">
             
                  <label for="period">서비스 희망일</label>
-                <input class="period-input" type="date" name="period" id="period" placeholder="서비스 희망일을 선택해주세요.">
-            
-            
+                 <input class="period-input" type="date" name="period" id="period" placeholder="서비스 희망일을 선택해주세요.">
+
                  <label for="period">서비스 희망일</label>
                 <input class="period-input" type="date" name="period" id="period" placeholder="서비스 희망일을 선택해주세요.">
             </form>
@@ -124,7 +124,7 @@
     <footer>
         <p>&copy; 2024 모두클린. All Rights Reserved.</p>
     </footer>
-    <script src="/public/js/carousel.js"></script>
+    <!-- <script src="/public/js/carousel.js"></script> -->
     <script src="/public/js/inquiry.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
